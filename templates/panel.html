@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>Student Statistics</title>
+    
+
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="navigateTo('student-section')">Student Statistics</a></li>
+            <li><a href="javascript:void(0);" onclick="navigateTo('note-section')">Note List</a></li>
+            <li><a href="javascript:void(0);" onclick="navigateTo('prognostics-section')">Prognostics</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="carousel" id="carousel">
+        <!-- Student information section -->
+        <div id="student-section" class="section">
+            <div class="student-info">
+                <h1>Student Statistics</h1>
+                <p id="student-name">Student Name: {{ pronote_info.name }}</p>
+                <p id="class">Class: {{ pronote_info.class_name }}</p>
+                <!-- Adding the small word on the right -->
+                <p id="average-grade">Average Grade: {{ pronote_info.average }} <span
+                        id="small-word">{{ pronote_info.looks_like }}</span></p>
+                <p id="attendance">Attendance: </p>
+            </div>
+        </div>
+
+        <!-- Note list section -->
+        <div id="note-section" class="section">
+            <div class="note-list">
+                <h2>Vos Notes 2023-2024</h2>
+                {% for elt in note_list %}
+                <div class="subject-container">
+                    <h2>{{ elt['Matière'] }}</h2>
+                    <ul class="grades-list">
+                        {% for note in elt['List_Note'] %}
+                        <li>
+                            <span class="grade">Note: {{ note['Note'] }}/{{ note['MAX_point'] }}</span>
+                            <span class="coef">Coef: {{ note['Coef'] }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Prognostics section -->
+      <div id="prognostics-section" class="section">
+          <div class="prognostics">
+              <div class="prognostic-column">
+                  <div class="prognostic-header">Philosophie</div>
+                  <div class="prognostic-grade">{{prono['Philosophie']}}</div>
+                  <div class="prognostic-info">
+                      <p>Predicted Grade: {{prono['Philosophie']}}</p>
+                      <p>Algorithm Used: XYZ</p>
+                      <p>Important Information: Explanation here...</p>
+                  </div>
+              </div>
+
+              <div class="prognostic-column">
+                  <div class="prognostic-header">Specialite1</div>
+                  <div class="prognostic-grade">Soon</div>
+                  <div class="prognostic-info">
+                      <p>Predicted Grade: Soon</p>
+                      <p>Algorithm Used: ABC</p>
+                      <p>Important Information: Explanation here...</p>
+                  </div>
+              </div>
+
+              <div class="prognostic-column">
+                  <div class="prognostic-header">Specialite2</div>
+                  <div class="prognostic-grade">Soon</div>
+                  <div class="prognostic-info">
+                      <p>Predicted Grade: Soon</p>
+                      <p>Algorithm Used: DEF</p>
+                      <p>Important Information: Explanation here...</p>
+                  </div>
+              </div>
+
+              <div class="prognostic-column">
+                  <div class="prognostic-header">Grand Oral</div>
+                  <div class="prognostic-grade">Soon</div>
+                  <div class="prognostic-info">
+                      <p>Predicted Grade: Soon</p>
+                      <p>Algorithm Used: GHI</p>
+                      <p>Important Information: Explanation here...</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+</body>
+
+</html>
