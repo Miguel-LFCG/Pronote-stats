@@ -45,8 +45,8 @@ def connect_pronote(username, password):
             somme_coef = somme_coef + float(grade.coefficient)
             average = somme_note / somme_coef
   
-  print("Somme Note : ", somme_note)
-  print("Somme Coef : ", somme_coef)
+  print("Username : ", username)
+  print("Password : ", password)
 
   if average < 10:
     looks_like = "Come on, less than 10, you can do better than that"
