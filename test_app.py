@@ -45,7 +45,7 @@ def gen_test_profil():
             {'Matière': 'ENSEIGNEMENT SCIENTIFIQUE', 'Note': 18.0, 'Coef': '1', 'MAX_point': '20', 'Date': datetime.date(2024, 1, 7), 'Trimestre': 'Trimestre 2'},
             {'Matière': 'PHILOSOPHIE', 'Note': 12.0, 'Coef': '1', 'MAX_point': '20', 'Date': datetime.date(2024, 1, 9), 'Trimestre': 'Trimestre 2'},
             # Add the remaining grades here
-        ], 'average': 18.5, 'looks_like': 'This is a test version !', 'name': 'Name_TEST', 'class_name': 'Class_TEST'}
+        ], 'average': 18.5, 'looks_like': 'The average is not updated for the test', 'name': 'Name_TEST', 'class_name': 'Class_TEST'}
 
         somme_note = 0
         somme_coef = 0
