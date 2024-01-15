@@ -50,8 +50,9 @@ Replace the URL in the parentheses with the web address of your Pronote school. 
    python main.py
 ```
 
-Access the application in your web browser by navigating to http://localhost:5000.
-Contributing
+2. Access the application in your web browser by navigating to http://localhost:5000.
+
+
 Contributions to LFCG Pronote are welcome! If you find any issues or have ideas for improvement, please open an issue or submit a pull request.
 
 License
