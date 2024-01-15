@@ -1,6 +1,6 @@
-# LFCG Pronote 📚🔗
+# Pronote Stats 📚🔗
 
-LFCG Pronote is a Python-based project designed to enhance the functionality of Pronote, a web-based school management system. This project includes features such as Baccalauréat (Bac) exam data generation, Pronote API integration, and more.
+Pronote stats is a Python-based project designed to enhance the functionality of Pronote, a web-based school management system. This project includes features such as Baccalauréat (Bac) exam data generation, Pronote API integration, and more.
 
 ## Table of Contents 🗂
 
