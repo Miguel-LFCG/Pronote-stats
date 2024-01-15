@@ -58,7 +58,7 @@ class Predict_Algo:
     return (format(Note_FINAL/total_coef, '.1f'))
 
   def Specialité_gen(self, nom_spe):
-    Note_FINAL = 1
+    """Note_FINAL = 1
     for notes in self.notes:
       if notes['Matière'] == str(nom_spe):
         for note in notes['List_Note']:
@@ -70,4 +70,5 @@ class Predict_Algo:
             Note_FINAL = Note_FINAL * note / 2
           else:
             print("Warning: Coefficient is 0 or negative. Skipping this entry.")
-    return Note_FINAL
+    return Note_FINAL"""
+    pass
