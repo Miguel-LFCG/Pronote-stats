@@ -23,13 +23,13 @@ pip install -r requirements.txt
 
 The project consists of the following files:
 
-- `data_bac_gen.py`: Python script for generating Baccalauréat (Bac) exam data.
-- `data_sorted.py`: Python script for sorting data.
-- `main.py`: Main script for the LFCG Pronote project.
-- `pronote.py`: Pronote API integration script.
-- `test_app.py`: Test script for the application.
-- `static/`: Directory containing static files.
-- `templates/`: Directory containing templates.
+- `data_bac_gen.py`: Python script for generating Baccalauréat (Bac) exam data. **Progress : 10%**
+- `data_sorted.py`: Python script for sorting data. **Progress : 90%**
+- `main.py`: Main script for the LFCG Pronote project. **Progress : 80%** 
+- `pronote.py`: Pronote API integration script. **Progress : 99%** _Extract other data for the Profil and  Pronostic section_
+- `test_app.py`: Test script for the application. **Progress : 90%** _Average Not Calculated for a Test Profil_
+- `static/`: Directory containing static files. **Progress : 95%** _Need to update the CSS for the Pronostic section_
+- `templates/`: Directory containing templates. **Progress : 95%** _Implement other data in the Profil and  Pronostic_
 
 ## Configuration 🔧
 
