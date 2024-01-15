@@ -1,6 +1,6 @@
-# LFCG Pronote
+# LFCG Pronote 📚🔗
 
-LFCG Pronote is a Python-based project that aims to provide functionality related to Pronote, a web-based school management system. This project includes features such as data generation for the Baccalauréat (Bac) exams, Pronote API integration, and more.
+LFCG Pronote is a Python-based project designed to enhance the functionality of Pronote, a web-based school management system. This project includes features such as Baccalauréat (Bac) exam data generation, Pronote API integration, and more.
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@ LFCG Pronote is a Python-based project that aims to provide functionality relate
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
+## Installation 🚀
 
 To get started with LFCG Pronote, follow these steps:
 
@@ -19,7 +19,7 @@ cd LFCG-Pronote
 pip install -r requirements.txt
 ```
 
-# Usage
+# Usage 🖥️
 
 The project consists of the following files:
 
@@ -31,7 +31,7 @@ The project consists of the following files:
 - `static/`: Directory containing static files.
 - `templates/`: Directory containing templates.
 
-## Configuration
+## Configuration ⚙️
 
 To use LFCG Pronote for your college/lycée, you need to update the Pronote school web address in the `pronote.py` script. Open `pronote.py` and locate the following line:
 
@@ -46,12 +46,13 @@ Replace the URL in the parentheses with the web address of your Pronote school. 
 
 1. Run the main application:
 
-   ```bash
+```bash
    python main.py
 ```
 
 2. Access the application in your web browser by navigating to http://localhost:5000.
 
+## Contributing 🤝
 
 Contributions to LFCG Pronote are welcome! If you find any issues or have ideas for improvement, please open an issue or submit a pull request.
 
