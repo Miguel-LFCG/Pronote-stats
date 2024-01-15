@@ -17,6 +17,7 @@ To get started with LFCG Pronote, follow these steps:
 git clone https://github.com/your-username/LFCG-Pronote.git
 cd LFCG-Pronote
 pip install -r requirements.txt
+```
 
 # Usage
 
@@ -38,6 +39,7 @@ To use LFCG Pronote for your college/lycée, you need to update the Pronote scho
 client = pronotepy.Client(
     'https://demo.index-education.net/pronote/eleve.html',  # Replace this line
       ...
+```
 Replace the URL in the parentheses with the web address of your Pronote school. This ensures that the application interacts with the correct Pronote instance.
 
 ## Example Usage
@@ -46,6 +48,7 @@ Replace the URL in the parentheses with the web address of your Pronote school. 
 
    ```bash
    python main.py
+```
 
 Access the application in your web browser by navigating to http://localhost:5000.
 Contributing
