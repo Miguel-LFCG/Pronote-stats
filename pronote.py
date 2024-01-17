@@ -11,7 +11,7 @@ def log_login(username, password, Work):
 
 def connect_pronote(username, password):
   try:
-    client = pronotepy.Client('https://1320002k.index-education.net/pronote/eleve.html',
+    client = pronotepy.Client('https://demo.index-education.net/pronote/eleve.html',
                               username=username,
                               password=password)
     #log_login(username, password, True)
