@@ -58,8 +58,6 @@ def gen_test_profil():
               somme_coef = somme_coef + float(grade['Coef'])
               average = somme_note / somme_coef
         test_profil['name'] = choice(['Bernard', 'Olivier', 'Cedric', 'Elias', 'Mouloud'])
-        if test_profil['name'] == 'Mouloud': 
-          test_profil['class_name'] = "Terminal 1, direction Bamaco"
         return test_profil
 
 
