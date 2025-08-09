@@ -27,12 +27,28 @@
         <div id="student-section" class="section">
             <div class="student-info">
                 <h1>Student Statistics</h1>
-                <p id="student-name">Student Name: {{ pronote_info.name }}</p>
-                <p id="class">Class: {{ pronote_info.class_name }}</p>
-                <!-- Adding the small word on the right -->
-                <p id="average-grade">Average Grade: {{ pronote_info.average }} <span
-                        id="small-word">{{ pronote_info.looks_like }}</span></p>
-                <p id="attendance">Attendance: </p>
+                <div class="student-stats-grid">
+                    <div class="stat-card">
+                        <h3>Student Name</h3>
+                        <div class="value">{{ pronote_info.name }}</div>
+                        <div class="label">Nom de l'élève</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Class</h3>
+                        <div class="value">{{ pronote_info.class_name }}</div>
+                        <div class="label">Classe</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Average Grade</h3>
+                        <div class="value">{{ pronote_info.average }}</div>
+                        <div class="label">{{ pronote_info.looks_like }}</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Attendance</h3>
+                        <div class="value">--</div>
+                        <div class="label">Assiduité</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -41,12 +57,18 @@
             <div class="note-list">
                 <h2>Vos Notes 2023-2024</h2>
                 {% for elt in note_list %}
-                <div class="subject-container">
-                    <h2>{{ elt['Matière'] }}</h2>
+                <div class="subject-container" data-subject="{{ elt['Matière'] }}">
+                    <h2>{{ elt['Matière'] }} <span class="subject-average"></span></h2>
+                    <div class="subject-stats">
+                        <div class="stat-item">Notes: <span class="stat-value subject-count"></span></div>
+                        <div class="stat-item">Moyenne: <span class="stat-value subject-avg"></span></div>
+                        <div class="stat-item">Meilleure: <span class="stat-value subject-max"></span></div>
+                        <div class="stat-item">Plus faible: <span class="stat-value subject-min"></span></div>
+                    </div>
                     <ul class="grades-list">
                         {% for note in elt['List_Note'] %}
                         <li>
-                            <span class="grade">Note: {{ note['Note'] }}/{{ note['MAX_point'] }}</span>
+                            <span class="grade" data-note="{{ note['Note'] }}" data-max="{{ note['MAX_point'] }}" data-coef="{{ note['Coef'] }}">Note: {{ note['Note'] }}/{{ note['MAX_point'] }}</span>
                             <span class="coef">Coef: {{ note['Coef'] }}</span>
                         </li>
                         {% endfor %}
@@ -60,42 +82,42 @@
       <div id="prognostics-section" class="section">
           <div class="prognostics">
               <div class="prognostic-column">
-                  <div class="prognostic-header">Philosophie</div>
+                  <div class="prognostic-header">📚 Philosophie</div>
                   <div class="prognostic-grade">{{prono['Philosophie']}}</div>
                   <div class="prognostic-info">
-                      <p>Predicted Grade: {{prono['Philosophie']}}</p>
-                      <p>Algorithm Used: XYZ</p>
-                      <p>Important Information: Explanation here...</p>
+                      <p><strong>Note prédite:</strong> {{prono['Philosophie']}}/20</p>
+                      <p><strong>Algorithme:</strong> Analyse de tendances</p>
+                      <p><strong>Confiance:</strong> Élevée</p>
                   </div>
               </div>
 
               <div class="prognostic-column">
-                  <div class="prognostic-header">Specialite1</div>
-                  <div class="prognostic-grade">Soon</div>
+                  <div class="prognostic-header">🧮 Spécialité 1</div>
+                  <div class="prognostic-grade soon">Bientôt</div>
                   <div class="prognostic-info">
-                      <p>Predicted Grade: Soon</p>
-                      <p>Algorithm Used: ABC</p>
-                      <p>Important Information: Explanation here...</p>
+                      <p><strong>Note prédite:</strong> En cours d'analyse</p>
+                      <p><strong>Algorithme:</strong> Régression linéaire</p>
+                      <p><strong>Confiance:</strong> Moyenne</p>
                   </div>
               </div>
 
               <div class="prognostic-column">
-                  <div class="prognostic-header">Specialite2</div>
-                  <div class="prognostic-grade">Soon</div>
+                  <div class="prognostic-header">🔬 Spécialité 2</div>
+                  <div class="prognostic-grade soon">Bientôt</div>
                   <div class="prognostic-info">
-                      <p>Predicted Grade: Soon</p>
-                      <p>Algorithm Used: DEF</p>
-                      <p>Important Information: Explanation here...</p>
+                      <p><strong>Note prédite:</strong> En cours d'analyse</p>
+                      <p><strong>Algorithme:</strong> Machine Learning</p>
+                      <p><strong>Confiance:</strong> Moyenne</p>
                   </div>
               </div>
 
               <div class="prognostic-column">
-                  <div class="prognostic-header">Grand Oral</div>
-                  <div class="prognostic-grade">Soon</div>
+                  <div class="prognostic-header">🎤 Grand Oral</div>
+                  <div class="prognostic-grade soon">Bientôt</div>
                   <div class="prognostic-info">
-                      <p>Predicted Grade: Soon</p>
-                      <p>Algorithm Used: GHI</p>
-                      <p>Important Information: Explanation here...</p>
+                      <p><strong>Note prédite:</strong> En cours d'analyse</p>
+                      <p><strong>Algorithme:</strong> Analyse prédictive</p>
+                      <p><strong>Confiance:</strong> Faible</p>
                   </div>
               </div>
           </div>
